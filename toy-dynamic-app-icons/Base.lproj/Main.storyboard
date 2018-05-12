@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="toy_dynamic_app_icons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ePf-Wg-A7k">
+                                <rect key="frame" x="98" y="233" width="179" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ywb-kM-GfA"/>
+                                </constraints>
+                                <state key="normal" title="Change to alternate icon 1"/>
+                                <connections>
+                                    <action selector="changeToAlternateIcon1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKr-Oj-bXT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="GCg-E3-OIs">
+                                <rect key="frame" x="98" y="303" width="179" height="60"/>
+                                <state key="normal" title="Change to alternate icon 2"/>
+                                <connections>
+                                    <action selector="changeToAlternateIcon2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZz-qg-f3A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-br-DkC">
+                                <rect key="frame" x="98" y="373" width="179" height="60"/>
+                                <state key="normal" title="Reset icon"/>
+                                <connections>
+                                    <action selector="resetAppIcon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMz-ZS-0mz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bsv-br-DkC" firstAttribute="top" secondItem="GCg-E3-OIs" secondAttribute="bottom" constant="10" id="C7r-B5-5wC"/>
+                            <constraint firstItem="GCg-E3-OIs" firstAttribute="trailing" secondItem="Bsv-br-DkC" secondAttribute="trailing" id="E7o-9L-XFs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bsv-br-DkC" secondAttribute="bottom" constant="234" id="Jwq-TX-eWN"/>
+                            <constraint firstItem="ePf-Wg-A7k" firstAttribute="trailing" secondItem="GCg-E3-OIs" secondAttribute="trailing" id="VWr-LK-BSZ"/>
+                            <constraint firstItem="GCg-E3-OIs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YRk-rX-acI"/>
+                            <constraint firstItem="ePf-Wg-A7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGR-uR-z2I"/>
+                            <constraint firstItem="GCg-E3-OIs" firstAttribute="top" secondItem="ePf-Wg-A7k" secondAttribute="bottom" constant="10" id="fkJ-U1-A6B"/>
+                            <constraint firstItem="GCg-E3-OIs" firstAttribute="leading" secondItem="Bsv-br-DkC" secondAttribute="leading" id="gze-Vi-vOg"/>
+                            <constraint firstItem="ePf-Wg-A7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="jbp-z0-Qcc"/>
+                            <constraint firstItem="ePf-Wg-A7k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="213" id="nJO-6j-PLa"/>
+                            <constraint firstItem="ePf-Wg-A7k" firstAttribute="leading" secondItem="GCg-E3-OIs" secondAttribute="leading" id="qcD-Ly-Squ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

@@ -15,11 +15,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func changeAppIcon(to name: String?) {
+        guard UIApplication.shared.supportsAlternateIcons else { return }
+
+        UIApplication.shared.setAlternateIconName(name) { error in
+            if let error = error {
+                print("Failed to change app icon: \(error.localizedDescription)")
+            } else {
+                print("Successfully changed app icon!")
+            }
+        }
     }
 
+    @IBAction func changeToAlternateIcon1(_ sender: Any) {
+        changeAppIcon(to: "AlternateIcon1")
+    }
 
+    @IBAction func changeToAlternateIcon2(_ sender: Any) {
+        changeAppIcon(to: "AlternateIcon2")
+    }
+    @IBAction func resetAppIcon(_ sender: Any) {
+        changeAppIcon(to: nil)
+    }
 }
 
